@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Streaming Webcam - Doppio Video Verticale</title>
+    <title>Streaming Webcam - Sdoppia Telecamera</title>
     <style>
         body, html {
             margin: 0;
@@ -48,9 +48,9 @@
         // Funzione per avviare il flusso video dalla webcam
         async function startWebcam() {
             try {
-                // Ottieni il flusso video dalla webcam con una risoluzione più bassa per ridurre il carico
+                // Ottieni il flusso video dalla webcam USB
                 const stream = await navigator.mediaDevices.getUserMedia({
-                    video: { width: 1280, height: 720 } // Risoluzione ridotta per ridurre il carico
+                    video: { width: 1280, height: 720 } // Risoluzione scelta per una buona qualità
                 });
 
                 // Aggiungi il flusso alla sorgente dei due video
@@ -83,3 +83,4 @@
     </script>
 </body>
 </html>
+
