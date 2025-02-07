@@ -1,86 +1,217 @@
 <!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
+<html style="font-size: 16px;" lang="it"><head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Streaming Webcam - Sdoppia Telecamera</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden; /* Evita le barre di scorrimento */
-            background-color: #000; /* Sfondo nero per migliorare l'effetto */
-        }
-        .video-container {
-            display: flex;
-            flex-direction: row; /* Dispone i video orizzontalmente */
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            width: 100%;
-        }
-        video {
-            width: 50%; /* Ogni video prende metà della larghezza */
-            height: 100%; /* Ogni video occupa l'intera altezza disponibile */
-            object-fit: cover; /* Assicura che il video copra tutto senza distorsioni */
-        }
-
-        /* Stili per i dispositivi mobili */
-        @media (max-width: 768px) {
-            .video-container {
-                flex-direction: column; /* Cambia l'orientamento in verticale sui dispositivi mobili */
-            }
-            video {
-                width: 100%; /* Ogni video occupa tutta la larghezza sul telefono */
-                height: 50%; /* Ogni video prende metà altezza sul telefono */
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="video-container">
-        <video id="webcamVideo1" autoplay playsinline></video>
-        <video id="webcamVideo2" autoplay playsinline></video>
-    </div>
-
-    <script>
-        // Funzione per avviare il flusso video dalla webcam
-        async function startWebcam() {
-            try {
-                // Ottieni il flusso video dalla webcam USB
-                const stream = await navigator.mediaDevices.getUserMedia({
-                    video: { width: 1280, height: 720 } // Risoluzione scelta per una buona qualità
-                });
-
-                // Aggiungi il flusso alla sorgente dei due video
-                const videoElement1 = document.getElementById('webcamVideo1');
-                const videoElement2 = document.getElementById('webcamVideo2');
-                
-                videoElement1.srcObject = stream;
-                videoElement2.srcObject = stream;
-
-                // Ottimizzazione per il rendering video
-                syncVideoRendering();
-            } catch (error) {
-                console.error('Errore nell\'accesso alla webcam: ', error);
-                alert('Impossibile accedere alla webcam.');
-            }
-        }
-
-        // Funzione di sincronizzazione per migliorare il rendering
-        function syncVideoRendering() {
-            requestAnimationFrame(syncVideoRendering); // Sincronizza il video con il refresh rate del monitor
-            const videoElement1 = document.getElementById('webcamVideo1');
-            const videoElement2 = document.getElementById('webcamVideo2');
-            
-            videoElement1.play();
-            videoElement2.play();
-        }
-
-        // Avvia la webcam quando il sito viene caricato
-        window.onload = startWebcam;
-    </script>
-</body>
-</html>
-
+    <meta charset="utf-8">
+    <meta name="keywords" content="Tour avventurosi, Solo buoni viaggi, Ogni viaggio è unico, Attività ricreative all&amp;apos;aperto, Le avventure in vacanza assumono molte forme, Campeggio vicino alle sorgenti termali, Tour avventurosi, Campeggio unico, Incontra il team I nostri professionisti, Tour Natura e fauna selvatica, Mettiti in contatto">
+    <meta name="description" content="">
+    <title>Home</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+<link rel="stylesheet" href="index.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 7.3.1, nicepage.com">
+    
+    
+    
+    
+    
+    
+    
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Roboto+Condensed:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"logo": "images/Designer-removebg-preview.png"
+}</script>
+    <meta name="theme-color" content="#f58d54">
+    <meta property="og:title" content="Home">
+    <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <body data-home-page="Home.html" data-home-page-title="Home" data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="it"><header class="u-clearfix u-grey-80 u-header u-header" id="header"><div class="u-clearfix u-sheet u-sheet-1">
+        <a href="#" class="u-image u-image-round u-logo u-radius u-image-1" data-image-width="661" data-image-height="377">
+          <img src="images/Designer-removebg-preview.png" class="u-logo-image u-logo-image-1">
+        </a>
+        <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+            <a class="u-button-style u-custom-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-hamburger-link u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xlink:href="#menu-hamburger"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-3-base u-text-hover-palette-3-light-2 u-text-palette-3-base" href="index.html" style="padding: 10px 20px;">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-3-base u-text-hover-palette-3-light-2 u-text-palette-3-base" href="Pagina-1.html" style="padding: 10px 20px;">Il progetto</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-3-base u-text-hover-palette-3-light-2 u-text-palette-3-base" href="Pagina-2.html" style="padding: 10px 20px;">Sclerosi Multipla</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-3-base u-text-hover-palette-3-light-2 u-text-palette-3-base" href="Pagina-3.html" style="padding: 10px 20px;">Noi</a>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="index.html">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Pagina-1.html">Il progetto</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Pagina-2.html">Sclerosi Multipla</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Pagina-3.html">Noi</a>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section class="u-align-center u-clearfix u-container-align-center u-image u-shading u-section-1" id="carousel_790c" data-image-width="6000" data-image-height="3376">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h4 class="u-align-center u-text u-text-default u-text-white u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1500">VIDEOGIOCHI PER TUTTI </h4>
+        <h1 class="u-align-center u-text u-text-default u-text-white u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">Guida la tua macchina! </h1>
+        <h3 class="u-align-center u-text u-text-white u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">Mettiti dove sei più comodo, indossa il visore e divertiti a sfrecciare in giro per il mondo </h3>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-container-align-center u-grey-80 u-section-2" id="carousel_5369">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="custom-expanded u-layout-grid u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-align-center u-border-5 u-border-grey-70 u-container-align-center u-container-style u-grey-80 u-list-item u-radius u-repeater-item u-shape-round u-video-cover u-list-item-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="250">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
+                <span class="u-align-center u-file-icon u-icon u-text-palette-3-base u-icon-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><img src="images/2736918-2f1dd596.png" alt=""></span>
+                <h4 class="u-align-center u-text u-text-1">Alphabot </h4>
+                <p class="u-align-center u-text u-text-2">Potrai pilotare a distanza la tua macchinina </p>
+              </div>
+            </div>
+            <div class="u-align-center u-border-5 u-border-grey-70 u-container-align-center u-container-style u-grey-80 u-list-item u-radius u-repeater-item u-shape-round u-video-cover u-list-item-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="250">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2">
+                <span class="u-align-center u-file-icon u-icon u-text-palette-3-base u-icon-2" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><img src="images/9568954-5d686863.png" alt=""></span>
+                <h4 class="u-align-center u-text u-text-3">CARDBOARD </h4>
+                <p class="u-align-center u-text u-text-4">Tramite il visore potrai vedere dove sta andando la macchina </p>
+              </div>
+            </div>
+            <div class="u-align-center u-border-5 u-border-grey-70 u-container-align-center u-container-style u-grey-80 u-list-item u-radius u-repeater-item u-shape-round u-video-cover u-list-item-3" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="250">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
+                <span class="u-align-center u-file-icon u-icon u-text-palette-3-base u-icon-3" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><img src="images/2284001-543607c0.png" alt=""></span>
+                <h4 class="u-align-center u-text u-text-5">DOVE VUOI </h4>
+                <p class="u-align-center u-text u-text-6">Posizionati dove preferisci e goditi la trasmissione in streaming in tempo reale </p>
+              </div>
+            </div>
+            <div class="u-align-center u-border-5 u-border-grey-70 u-container-align-center u-container-style u-grey-80 u-list-item u-radius u-repeater-item u-shape-round u-video-cover u-list-item-4" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="250">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-4">
+                <span class="u-align-center u-file-icon u-icon u-text-palette-3-base u-icon-4" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><img src="images/921439-9d54c39c.png" alt=""></span>
+                <h4 class="u-align-center u-text u-text-7">OVUNQUE</h4>
+                <p class="u-align-center u-text u-text-8">Potrai far andare la macchinina dove vuoi e giocare con dei percorsi </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-grey-80 u-section-3" id="sec-7d47">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="data-layout-selected u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-col">
+              <div class="u-size-30">
+                <div class="u-layout-row">
+                  <div class="u-container-align-center u-container-style u-image u-layout-cell u-size-40 u-image-1" data-image-width="6000" data-image-height="3376">
+                    <div class="u-container-layout u-container-layout-1"></div>
+                  </div>
+                  <div class="u-container-align-center u-container-style u-image u-layout-cell u-size-20 u-image-2" data-image-width="6000" data-image-height="3376">
+                    <div class="u-container-layout u-container-layout-2"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="u-size-30">
+                <div class="u-layout-row">
+                  <div class="u-container-align-center u-container-style u-image u-layout-cell u-size-20 u-image-3" data-image-width="6000" data-image-height="3376">
+                    <div class="u-container-layout u-container-layout-3"></div>
+                  </div>
+                  <div class="u-container-align-center u-container-style u-image u-layout-cell u-size-40 u-image-4" data-image-width="6000" data-image-height="3376">
+                    <div class="u-container-layout u-container-layout-4"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-container-align-center u-grey-80 u-section-4" id="carousel_fe1c">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-align-center u-text u-text-default u-text-1">Come giocare </h2>
+        <p class="u-align-center u-text u-text-2"> Prendi il joystick in mano, indossa il visore e preparati a giocare. Ti basterà inclinare il joystick in avanti, indietro, a destra e a sinistra per far spostare l'alphabot dove preferisci.</p>
+        <div class="u-expanded-width u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-align-center u-container-align-center u-container-style u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-1">
+              <div class="u-container-layout u-similar-container u-container-layout-1">
+                <img class="u-expanded-width u-image u-image-1" src="images/DSC00950-min.JPG" data-image-width="6000" data-image-height="3376">
+                <h4 class="u-custom-font u-font-roboto-condensed u-hover-feature u-text u-text-3">AVANTI</h4>
+              </div>
+            </div>
+            <div class="u-align-center u-container-align-center u-container-style u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-2">
+              <div class="u-container-layout u-similar-container u-container-layout-2">
+                <img class="u-expanded-width u-image u-image-2" src="images/DSC00953-min.JPG" data-image-width="6000" data-image-height="3376">
+                <h4 class="u-custom-font u-font-roboto-condensed u-hover-feature u-text u-text-4">INDIETRO</h4>
+              </div>
+            </div>
+            <div class="u-align-center u-container-align-center u-container-style u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-3">
+              <div class="u-container-layout u-similar-container u-container-layout-3">
+                <img class="u-expanded-width u-image u-image-3" src="images/DSC00951-min.JPG" data-image-width="6000" data-image-height="3376">
+                <h4 class="u-custom-font u-font-roboto-condensed u-hover-feature u-text u-text-5">destra</h4>
+              </div>
+            </div>
+            <div class="u-align-center u-container-align-center u-container-style u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-4">
+              <div class="u-container-layout u-similar-container u-container-layout-4">
+                <img class="u-expanded-width u-image u-image-4" src="images/DSC00952-min.JPG" data-image-width="6000" data-image-height="3376">
+                <h4 class="u-custom-font u-font-roboto-condensed u-hover-feature u-text u-text-6">sinistra</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-container-align-center u-image u-shading u-section-5" data-image-width="700" data-image-height="349" id="sec-e4fd">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-large-text u-text u-text-variant u-text-1">Se vuoi scoprire meglio la parte tecnica del progetto, seguici sul nostro github e scopri tutti i codici.&nbsp;</p>
+        <a href="https://github.com/RoboticPow3r/Progetto_PCTO" class="u-active-white u-align-center u-border-2 u-border-active-white u-border-hover-white u-border-white u-btn u-btn-round u-button-style u-hover-white u-none u-radius-50 u-btn-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500" target="_blank">GITHUB </a>
+      </div>
+    </section>
+    
+    
+    
+    <footer class="u-align-center u-clearfix u-container-align-center u-footer u-grey-80 u-footer" id="footer"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">Grazie per l'opportunità di lavorare a questo progetto</p>
+      </div></footer>
+    <section class="u-backlink u-clearfix u-grey-80">
+      <p class="u-text">
+        <span>This site was created with the </span>
+        <a class="u-link" href="https://nicepage.com/" target="_blank" rel="nofollow">
+          <span>Nicepage</span>
+        </a>
+      </p>
+    </section>
+  
+</body></html>
